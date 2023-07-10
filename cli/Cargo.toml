@@ -1,0 +1,29 @@
+[package]
+name = "track2kml-cli"
+version = "2.0.2"
+edition = "2021"
+authors = [
+    "Alejandro Perea (aleok.inf@gmail.com)",
+    "Marco Castell (castellmartinmarco1@gmail.com)",
+]
+description = """track2kml reads from one of several drone tracking supported file formats and converts them into a KML 
+file readable by Google Earth."""
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+track2kml = { path = ".." }
+anyhow = "1.0.69"
+clap = { version = "4.1.6", features = ["derive"] }
+colored = "2.0.0"
+textwrap = { version = "0.16.0", default-features = false, features = [
+    "smawk",
+] }
+cfg-if = "1.0.0"
+itertools = "0.11.0"
+serde_json = "1.0.99"
+courageous-format = { git = "https://github.com/COURAGEOUS-isf/format.git", rev = "5d853fa9046a278bd8c0253fd26ba9e27d3b06b4" }
+
+[[bin]]
+name = "track2kml"
+path = "src/main.rs"

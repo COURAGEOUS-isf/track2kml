@@ -1,0 +1,33 @@
+[package]
+name = "track2kml"
+version = "0.6.0"
+edition = "2021"
+authors = [
+    "Alejandro Perea (aleok.inf@gmail.com)",
+    "Marco Castell (castellmartinmarco1@gmail.com)",
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+members = ["cli"]
+
+[dependencies]
+anyhow = "1.0.69"
+quick-xml = { version = "0.27.1", features = ["serialize"] }
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = "1.0.96"
+serde_path_to_error = "0.1.10"
+thiserror = "1.0.38"
+time = { version = "0.3.19", features = ["parsing", "formatting", "macros"] }
+map_3d = { version = "0.1.5" }
+courageous-format = { git = "https://github.com/COURAGEOUS-isf/format.git", rev = "5d853fa9046a278bd8c0253fd26ba9e27d3b06b4" }
+
+[dev-dependencies]
+anyhow = { version = "1.0.69", features = ["backtrace"] }
+
+
+[profile.release]
+strip = "debuginfo"
+lto = "fat"
+debug-assertions = false
