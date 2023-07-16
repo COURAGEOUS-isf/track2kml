@@ -1,6 +1,6 @@
 [package]
 name = "track2kml-cli"
-version = "2.0.2"
+version = "2.0.3"
 edition = "2021"
 authors = [
     "Alejandro Perea (aleok.inf@gmail.com)",

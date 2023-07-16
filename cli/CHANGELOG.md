@@ -1,3 +1,6 @@
+## 2.0.3
+- Internal structural changes.
+
 ## 2.0.2
 - Do not allow the -c option if the application is built with only COURAGEOUS support (This is technically a breaking change, but since it makes no sense to use it, it's counted as a minor change/bugfix)
 - Update README
