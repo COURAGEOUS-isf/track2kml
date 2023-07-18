@@ -80,15 +80,14 @@ pub fn write_extended_data(
                         courageous_format::Classification::Uav => "UAV",
                         courageous_format::Classification::Unknown => "Unknown",
                     }))?;
+                let alarm = record.alarm.map_or(false, |a| a.active);
                 x.create_element("SimpleData")
                     .with_attribute(("name", "alarm"))
-                    .write_text_content(BytesText::new(if record.alarm { "On" } else { "Off" }))?;
+                    .write_text_content(BytesText::new(if alarm { "On" } else { "Off" }))?;
+                let certainty = record.alarm.map_or(0., |a| a.alarm_certainty);
                 x.create_element("SimpleData")
                     .with_attribute(("name", "alarm_certainty"))
-                    .write_text_content(BytesText::new(&format!(
-                        "{:.0}",
-                        record.alarm_certainty * 100.
-                    )))?;
+                    .write_text_content(BytesText::new(&format!("{:.0}", certainty * 100.)))?;
                 x.create_element("SimpleData")
                     .with_attribute(("name", "identification"))
                     .write_text_content(BytesText::new(
@@ -142,8 +141,9 @@ pub fn write_track_extended_data(
                     .with_attribute(("name", "alarm"))
                     .write_inner_content(|x| {
                         for record in records.iter() {
+                            let alarm = record.alarm.map_or(false, |a| a.active);
                             x.create_element("gx:value")
-                                .write_text_content(BytesText::new(if record.alarm {
+                                .write_text_content(BytesText::new(if alarm {
                                     "On"
                                 } else {
                                     "Off"
@@ -155,10 +155,11 @@ pub fn write_track_extended_data(
                     .with_attribute(("name", "alarm_certainty"))
                     .write_inner_content(|x| {
                         for record in records.iter() {
+                            let certainty = record.alarm.map_or(0., |a| a.alarm_certainty);
                             x.create_element("gx:value")
                                 .write_text_content(BytesText::new(&format!(
                                     "{:.0}",
-                                    record.alarm_certainty * 100.
+                                    certainty * 100.
                                 )))?;
                         }
                         Ok(())

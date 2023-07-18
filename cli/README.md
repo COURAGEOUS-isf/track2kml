@@ -22,7 +22,7 @@ For security concerns, only the appropiate formats on a given build will be avai
 
 ### Specific to the 2023 October [COURAGEOUS](https://courageous-isf.eu/) and subsequent tests
 
-- COURAGEOUS Format (as described in <https://grvc.us.es/courageous/>) version 0.2.0
+- COURAGEOUS Format (as described in <https://grvc.us.es/courageous/>) version 0.3.0
 
 ---
 
@@ -48,38 +48,7 @@ Where latitude and longitude are given in decimal degrees and height is given in
 
 `-c` is required when converting to a COURAGEOUS JSON file instead of a KML one.
 
-The full list of options can be found using `track2kml --help`:
-
-```
-Usage: track2kml [OPTIONS] <INPUT_PATH>
-
-Arguments:
-  <INPUT_PATH>
-          The path of the file to convert to KML
-
-Options:
-      --hint <HINT>
-          Hint the program as to which format the input file is in
-
-          [possible values: hgh-log, senhive, hgh-v2-log, datcon-log, courageous-v0.2, gpx, art-detection-log, art-tracking-log]
-
-      --origin <DETECTION_ORIGIN>
-          Specify the detection origin (Radar position) in GPS coordinates `lat,lon,height`.
-          
-          Values must be formatted as longitude,latitude[,altitude (AMSL)]. If the altitude is omitted, it will default to 0 (ground level).
-
-  -c
-          Convert to COURAGEOUS format (v0.2.0) rather than to KML
-
-      --no-track-icons
-          When exporting to KML: Hide all track icons, and only show their path or ray
-
-  -h, --help
-          Print help (see a summary with '-h')
-
-  -V, --version
-          Print version
-```
+The full list of options can be found using `track2kml --help`.
 
 ## Examples
 

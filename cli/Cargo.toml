@@ -1,6 +1,6 @@
 [package]
 name = "track2kml-cli"
-version = "2.0.3"
+version = "2.1.0"
 edition = "2021"
 authors = [
     "Alejandro Perea (aleok.inf@gmail.com)",
@@ -22,7 +22,7 @@ textwrap = { version = "0.16.0", default-features = false, features = [
 cfg-if = "1.0.0"
 itertools = "0.11.0"
 serde_json = "1.0.99"
-courageous-format = { git = "https://github.com/COURAGEOUS-isf/format.git", rev = "5d853fa9046a278bd8c0253fd26ba9e27d3b06b4" }
+courageous-format = { git = "https://github.com/COURAGEOUS-isf/format.git", tag = "v0.3.0" }
 
 [[bin]]
 name = "track2kml"

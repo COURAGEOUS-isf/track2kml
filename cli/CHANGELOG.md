@@ -1,3 +1,6 @@
+## 2.1.0
+- Update COURAGEOUS support to v0.3.0
+
 ## 2.0.3
 - Internal structural changes.
 
