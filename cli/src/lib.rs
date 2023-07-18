@@ -87,7 +87,10 @@ pub fn run(formats: &HashMap<&'static str, Format>, allow_to_courageous_option: 
             Arg::new("to_courageous")
                 .short('c')
                 .action(clap::ArgAction::SetTrue)
-                .help("Convert to COURAGEOUS format (v0.2.0) rather than to KML."),
+                .help(format!(
+                    "Convert to COURAGEOUS format (v{}) rather than to KML.",
+                    courageous_format::Version::current().0
+                )),
         )
     } else {
         cmd
