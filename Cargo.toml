@@ -21,7 +21,7 @@ serde_path_to_error = "0.1.10"
 thiserror = "1.0.38"
 time = { version = "0.3.19", features = ["parsing", "formatting", "macros"] }
 map_3d = { version = "0.1.5" }
-courageous-format = { git = "https://github.com/COURAGEOUS-isf/format.git", rev = "888061381d5a1189da95cebc5cf438e43232b5dd" }
+courageous-format = { git = "https://github.com/COURAGEOUS-isf/format.git", tag = "v0.3.1+schema.0.3.0" }
 
 [dev-dependencies]
 anyhow = { version = "1.0.69", features = ["backtrace"] }

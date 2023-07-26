@@ -22,7 +22,7 @@ textwrap = { version = "0.16.0", default-features = false, features = [
 cfg-if = "1.0.0"
 itertools = "0.11.0"
 serde_json = "1.0.99"
-courageous-format = { git = "https://github.com/COURAGEOUS-isf/format.git", rev = "888061381d5a1189da95cebc5cf438e43232b5dd" }
+courageous-format = { git = "https://github.com/COURAGEOUS-isf/format.git", tag = "v0.3.1+schema.0.3.0" }
 
 [[bin]]
 name = "track2kml"
