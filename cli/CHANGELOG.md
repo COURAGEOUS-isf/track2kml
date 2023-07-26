@@ -1,3 +1,6 @@
+## 2.1.1
+- Fix Position3d.height_amsl member still being parsed as "height"
+
 ## 2.1.0
 - Update COURAGEOUS support to v0.3.0
 
