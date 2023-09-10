@@ -1,3 +1,7 @@
+## 2.2.0
+- Update COURAGEOUS schema support to v0.3.1
+- Display record velocity in its KML extended data balloon
+
 ## 2.1.1
 - Fix Position3d.height_amsl member still being parsed as "height"
 

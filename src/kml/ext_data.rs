@@ -56,6 +56,15 @@ pub fn write_schema(x: &mut Writer<impl Write>) -> Result<(), quick_xml::Error> 
                     })?;
                     Ok(())
                 })?;
+            x.create_element("SimpleField")
+                .with_attribute(("name", "velocity"))
+                .with_attribute(("type", "string"))
+                .write_inner_content(|x| {
+                    x.create_element("displayName").write_inner_content(|x| {
+                        x.write_event(Event::CData(BytesCData::new("<b>Velocity</b>")))
+                    })?;
+                    Ok(())
+                })?;
             Ok(())
         })?;
     Ok(())
@@ -92,6 +101,40 @@ pub fn write_extended_data(
                     .with_attribute(("name", "identification"))
                     .write_text_content(BytesText::new(
                         record.identification.as_deref().unwrap_or("<i>empty</i>"),
+                    ))?;
+                x.create_element("SimpleData")
+                    .with_attribute(("name", "velocity"))
+                    .write_text_content(BytesText::new(
+                        &record
+                            .velocity
+                            .map(|v| {
+                                let ew = if v.east.is_sign_positive() {
+                                    "east"
+                                } else {
+                                    "west"
+                                };
+                                let ns = if v.north.is_sign_positive() {
+                                    "north"
+                                } else {
+                                    "south"
+                                };
+                                let ud = if v.up.is_sign_positive() {
+                                    "up"
+                                } else {
+                                    "down"
+                                };
+
+                                format!(
+                                    "{} m/s {}, {} m/s {}, {} m/s {}",
+                                    v.east.abs(),
+                                    ew,
+                                    v.north.abs(),
+                                    ns,
+                                    v.up.abs(),
+                                    ud,
+                                )
+                            })
+                            .unwrap_or("<i>not given</i>".to_owned()),
                     ))?;
                 Ok(())
             })?;
@@ -171,6 +214,41 @@ pub fn write_track_extended_data(
                             x.create_element("gx:value")
                                 .write_text_content(BytesText::new(
                                     record.identification.as_deref().unwrap_or("<i>empty</i>"),
+                                ))?;
+                        }
+                        Ok(())
+                    })?;
+                x.create_element("gx:SimpleArrayData")
+                    .with_attribute(("name", "velocity"))
+                    .write_inner_content(|x| {
+                        for record in records.iter() {
+                            x.create_element("gx:value")
+                                .write_text_content(BytesText::new(
+                                    &record
+                                        .velocity
+                                        .map(|v| {
+                                            let ud = if v.up.is_sign_positive() {
+                                                "up"
+                                            } else {
+                                                "down"
+                                            };
+                                            let ew = if v.east.is_sign_positive() {
+                                                "east"
+                                            } else {
+                                                "west"
+                                            };
+                                            let ns = if v.north.is_sign_positive() {
+                                                "north"
+                                            } else {
+                                                "south"
+                                            };
+
+                                            format!(
+                                                "{} m/s {}, {} m/s {}, {} m/s {}",
+                                                v.up, ud, v.east, ew, v.north, ns
+                                            )
+                                        })
+                                        .unwrap_or("<i>not given</i>".to_owned()),
                                 ))?;
                         }
                         Ok(())

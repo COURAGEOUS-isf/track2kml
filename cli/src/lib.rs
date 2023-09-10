@@ -5,7 +5,7 @@ use std::{
     collections::HashMap,
     ffi::OsStr,
     fs::File,
-    io::{BufRead, BufReader, BufWriter, Read},
+    io::{BufReader, BufWriter},
     path::{Path, PathBuf},
     process::ExitCode,
 };
