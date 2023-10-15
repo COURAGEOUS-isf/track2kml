@@ -2,10 +2,11 @@ use crate::Database;
 use quick_xml::Writer;
 
 use self::{
-    detection::write_detection_set, ext_data::write_schema, style::write_style,
+    cuas::write_cuas, detection::write_detection_set, ext_data::write_schema, style::write_style,
     tracking::write_track_set,
 };
 
+mod cuas;
 mod detection;
 mod ext_data;
 mod geometry;
@@ -42,6 +43,7 @@ pub fn write_as_kml(
                     database.static_cuas_location.clone(),
                 )?;
                 write_track_set(x, &database.tracks, database.static_cuas_location.clone())?;
+                write_cuas(x, database.static_cuas_location.clone())?;
 
                 Ok(())
             })?;

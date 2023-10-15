@@ -3,7 +3,7 @@ use quick_xml::{events::BytesText, Writer};
 use time::{format_description::well_known::Rfc3339, OffsetDateTime};
 
 use super::{
-    ext_data::{write_gxtrack_extended_data, write_tracking_extended_data},
+    ext_data::{write_extended_data, write_track_extended_data, Record},
     geometry::{
         create_arc_polygon, point_from_bearing_elevation_distance, ray_from_bearing,
         ray_from_bearing_elevation,
@@ -111,7 +111,7 @@ pub fn write_track<W: std::io::Write>(
                     // Positions are processed on the next step
                     Location::Position2d(_) | Location::Position3d(_) => unreachable!(),
                 }
-                write_tracking_extended_data(x, record)?;
+                write_extended_data(x, &<Record as From<TrackingRecord>>::from(record.clone()))?;
                 Ok(())
             })?;
         }
@@ -194,7 +194,7 @@ pub fn write_track<W: std::io::Write>(
                                             )),
                                         )?;
                                     }
-                                    write_gxtrack_extended_data(x, &contiguous_pos_records)?;
+                                    write_track_extended_data(x, &contiguous_pos_records)?;
 
                                     Ok(())
                                 })?;

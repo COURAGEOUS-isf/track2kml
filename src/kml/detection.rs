@@ -1,9 +1,9 @@
-use courageous_format::{Arc, Detection, Location, Position3d};
+use courageous_format::{Arc, Detection, DetectionRecord, Location, Position3d};
 use quick_xml::{events::BytesText, Writer};
 use time::{format_description::well_known::Rfc3339, OffsetDateTime};
 
 use super::{
-    ext_data::write_detection_extended_data,
+    ext_data::{write_extended_data, Record},
     geometry::{
         create_arc_polygon, point_from_bearing_elevation_distance, ray_from_bearing,
         ray_from_bearing_elevation,
@@ -60,7 +60,7 @@ pub fn write_detection(
                         .unwrap()
                         .format(&Rfc3339)
                         .unwrap();
-                write_detection_extended_data(x, record)?;
+                write_extended_data(x, &<Record as From<DetectionRecord>>::from(record.clone()))?;
 
                 x.create_element("styleUrl")
                     .write_text_content(BytesText::new("origin_style"))?;

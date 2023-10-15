@@ -1,4 +1,4 @@
-use courageous_schema::Position3d;
+use courageous_format::Position3d;
 use quick_xml::{events::BytesText, Writer};
 
 pub fn write_cuas(
