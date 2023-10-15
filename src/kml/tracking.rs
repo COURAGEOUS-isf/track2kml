@@ -1,9 +1,9 @@
-use courageous_format::{Arc, Location, Position3d, Record, Track};
+use courageous_format::{Arc, Location, Position3d, Track, TrackingRecord};
 use quick_xml::{events::BytesText, Writer};
 use time::{format_description::well_known::Rfc3339, OffsetDateTime};
 
 use super::{
-    ext_data::{write_extended_data, write_track_extended_data},
+    ext_data::{write_gxtrack_extended_data, write_tracking_extended_data},
     geometry::{
         create_arc_polygon, point_from_bearing_elevation_distance, ray_from_bearing,
         ray_from_bearing_elevation,
@@ -111,7 +111,7 @@ pub fn write_track<W: std::io::Write>(
                     // Positions are processed on the next step
                     Location::Position2d(_) | Location::Position3d(_) => unreachable!(),
                 }
-                write_extended_data(x, record)?;
+                write_tracking_extended_data(x, record)?;
                 Ok(())
             })?;
         }
@@ -146,7 +146,7 @@ pub fn write_track<W: std::io::Write>(
                                 // HACK: This mostly assumes all records are either Position2d or Position3d
                                 let mut contiguous_pos_records = vec![record];
                                 while let Some(
-                                    &record @ Record {
+                                    &record @ TrackingRecord {
                                         // HACK: This will result in points at the sea level if Position3d and Position2d are mixed
                                         location: Location::Position3d(_) | Location::Position2d(_),
                                         ..
@@ -194,7 +194,7 @@ pub fn write_track<W: std::io::Write>(
                                             )),
                                         )?;
                                     }
-                                    write_track_extended_data(x, &contiguous_pos_records)?;
+                                    write_gxtrack_extended_data(x, &contiguous_pos_records)?;
 
                                     Ok(())
                                 })?;

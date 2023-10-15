@@ -1,6 +1,6 @@
 use std::io::Write;
 
-use courageous_format::Record;
+use courageous_format::{DetectionRecord, TrackingRecord};
 use quick_xml::{
     events::{BytesCData, BytesText, Event},
     Writer,
@@ -70,9 +70,9 @@ pub fn write_schema(x: &mut Writer<impl Write>) -> Result<(), quick_xml::Error> 
     Ok(())
 }
 
-pub fn write_extended_data(
+pub fn write_detection_extended_data(
     x: &mut Writer<impl Write>,
-    record: &Record,
+    record: &DetectionRecord,
 ) -> Result<(), quick_xml::Error> {
     x.create_element("ExtendedData").write_inner_content(|x| {
         x.create_element("SchemaData")
@@ -93,7 +93,7 @@ pub fn write_extended_data(
                 x.create_element("SimpleData")
                     .with_attribute(("name", "alarm"))
                     .write_text_content(BytesText::new(if alarm { "On" } else { "Off" }))?;
-                let certainty = record.alarm.map_or(0., |a| a.alarm_certainty);
+                let certainty = record.alarm.map_or(0., |a| a.certainty);
                 x.create_element("SimpleData")
                     .with_attribute(("name", "alarm_certainty"))
                     .write_text_content(BytesText::new(&format!("{:.0}", certainty * 100.)))?;
@@ -144,9 +144,83 @@ pub fn write_extended_data(
     Ok(())
 }
 
-pub fn write_track_extended_data(
+pub fn write_tracking_extended_data(
     x: &mut Writer<impl Write>,
-    records: &[&Record],
+    record: &TrackingRecord,
+) -> Result<(), quick_xml::Error> {
+    x.create_element("ExtendedData").write_inner_content(|x| {
+        x.create_element("SchemaData")
+            .with_attribute(("schemaUrl", "#schema"))
+            .write_inner_content(|x| {
+                x.create_element("SimpleData")
+                    .with_attribute(("name", "record_number"))
+                    .write_text_content(BytesText::new(&format!("{}", record.record_number)))?;
+                x.create_element("SimpleData")
+                    .with_attribute(("name", "classification"))
+                    .write_text_content(BytesText::new(match record.classification {
+                        courageous_format::Classification::Gcs => "GCS",
+                        courageous_format::Classification::Other => "Other",
+                        courageous_format::Classification::Uav => "UAV",
+                        courageous_format::Classification::Unknown => "Unknown",
+                    }))?;
+                let alarm = record.alarm.active;
+                x.create_element("SimpleData")
+                    .with_attribute(("name", "alarm"))
+                    .write_text_content(BytesText::new(if alarm { "On" } else { "Off" }))?;
+                let certainty = record.alarm.certainty;
+                x.create_element("SimpleData")
+                    .with_attribute(("name", "alarm_certainty"))
+                    .write_text_content(BytesText::new(&format!("{:.0}", certainty * 100.)))?;
+                x.create_element("SimpleData")
+                    .with_attribute(("name", "identification"))
+                    .write_text_content(BytesText::new(
+                        record.identification.as_deref().unwrap_or("<i>empty</i>"),
+                    ))?;
+                x.create_element("SimpleData")
+                    .with_attribute(("name", "velocity"))
+                    .write_text_content(BytesText::new(
+                        &record
+                            .velocity
+                            .map(|v| {
+                                let ew = if v.east.is_sign_positive() {
+                                    "east"
+                                } else {
+                                    "west"
+                                };
+                                let ns = if v.north.is_sign_positive() {
+                                    "north"
+                                } else {
+                                    "south"
+                                };
+                                let ud = if v.up.is_sign_positive() {
+                                    "up"
+                                } else {
+                                    "down"
+                                };
+
+                                format!(
+                                    "{} m/s {}, {} m/s {}, {} m/s {}",
+                                    v.east.abs(),
+                                    ew,
+                                    v.north.abs(),
+                                    ns,
+                                    v.up.abs(),
+                                    ud,
+                                )
+                            })
+                            .unwrap_or("<i>not given</i>".to_owned()),
+                    ))?;
+                Ok(())
+            })?;
+
+        Ok(())
+    })?;
+    Ok(())
+}
+
+pub fn write_gxtrack_extended_data(
+    x: &mut Writer<impl Write>,
+    records: &[&TrackingRecord],
 ) -> Result<(), quick_xml::Error> {
     x.create_element("ExtendedData").write_inner_content(|x| {
         x.create_element("SchemaData")
@@ -184,7 +258,7 @@ pub fn write_track_extended_data(
                     .with_attribute(("name", "alarm"))
                     .write_inner_content(|x| {
                         for record in records.iter() {
-                            let alarm = record.alarm.map_or(false, |a| a.active);
+                            let alarm = record.alarm.active;
                             x.create_element("gx:value")
                                 .write_text_content(BytesText::new(if alarm {
                                     "On"
@@ -198,7 +272,7 @@ pub fn write_track_extended_data(
                     .with_attribute(("name", "alarm_certainty"))
                     .write_inner_content(|x| {
                         for record in records.iter() {
-                            let certainty = record.alarm.map_or(0., |a| a.alarm_certainty);
+                            let certainty = record.alarm.certainty;
                             x.create_element("gx:value")
                                 .write_text_content(BytesText::new(&format!(
                                     "{:.0}",
