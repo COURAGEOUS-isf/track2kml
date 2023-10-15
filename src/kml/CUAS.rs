@@ -1,7 +1,7 @@
 use courageous_format::Position3d;
 use quick_xml::{events::BytesText, Writer};
 
-pub fn write_cuas(
+pub fn write_cuas_origin(
     x: &mut Writer<impl std::io::Write>,
     static_cuas_origin: Position3d,
 ) -> Result<(), quick_xml::Error> {

@@ -1,6 +1,6 @@
-## 2.2.0
+## 2.3.0
 - Update COURAGEOUS schema support to v0.4.0
-- Implemented CUAS location representation.
+- Implement CUAS location representation.
 
 ## 2.2.0
 - Update COURAGEOUS schema support to v0.3.1
