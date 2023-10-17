@@ -7,6 +7,7 @@ use quick_xml::{
 const TRACK_ICON_URL: &'static str =
     "http://earth.google.com/images/kml-icons/track-directional/track-0.png";
 const ORIGIN_ICON_URL: &str = "http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png";
+const CUAS_ICON_URL: &str = "http://maps.google.com/mapfiles/kml/paddle/blu-circle.png";
 
 pub fn write_style(
     x: &mut Writer<impl std::io::Write>,
@@ -73,5 +74,30 @@ pub fn write_style(
             })?;
             Ok(())
         })?;
+    x.create_element("Style")
+    .with_attribute(("id", "cuas_style"))
+    .write_inner_content(|x| {
+        x.create_element("IconStyle").write_inner_content(|x| {
+            x.create_element("Icon").write_inner_content(|x| {
+                x.create_element("href")
+                    .write_text_content(BytesText::new(CUAS_ICON_URL))?;
+                Ok(())
+            })?;
+            x.create_element("scale")
+                .write_text_content(BytesText::new("0.5"))?;
+            Ok(())
+        })?;
+        x.create_element("BalloonStyle").write_inner_content(|x| {
+            x.create_element("text").write_inner_content(|x| {
+                x.write_event(Event::CData(BytesCData::new(
+                    "<b>CUAS</b></br>
+                Static Location of the CUAS.",
+                )))?;
+                Ok(())
+            })?;
+            Ok(())
+        })?;
+        Ok(())
+    })?;
     Ok(())
 }
