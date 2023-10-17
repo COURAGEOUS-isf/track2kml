@@ -1,6 +1,6 @@
 pub use courageous_format::{
-    Arc, Classification, Detection, Document as Database, Location, Position2d, Position3d, Quad,
-    Record, Track,
+    Arc, Classification, Detection, DetectionRecord, Document as Database, Location, Position2d,
+    Position3d, Quad, Track, TrackingRecord,
 };
 
 mod kml;

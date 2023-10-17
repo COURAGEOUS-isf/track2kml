@@ -3,7 +3,7 @@ use quick_xml::{events::BytesText, Writer};
 use time::{format_description::well_known::Rfc3339, OffsetDateTime};
 
 use super::{
-    ext_data::write_extended_data,
+    ext_data::write_detection_extended_data,
     geometry::{
         create_arc_polygon, point_from_bearing_elevation_distance, ray_from_bearing,
         ray_from_bearing_elevation,
@@ -47,7 +47,11 @@ pub fn write_detection(
                     .unwrap_or_else(|| "None".to_owned())
             )))?;
 
-        for record in detection.records.iter() {
+        for record in detection
+            .records
+            .iter()
+            .filter(|record| record.location.is_some())
+        {
             x.create_element("Placemark").write_inner_content(|x| {
                 x.create_element("name")
                     .write_text_content(BytesText::new(&format!("{}", record.record_number)))?;
@@ -56,7 +60,7 @@ pub fn write_detection(
                         .unwrap()
                         .format(&Rfc3339)
                         .unwrap();
-                write_extended_data(x, record)?;
+                write_detection_extended_data(x, record)?;
 
                 x.create_element("styleUrl")
                     .write_text_content(BytesText::new("origin_style"))?;
@@ -67,76 +71,77 @@ pub fn write_detection(
                     Ok(())
                 })?;
 
-                match &record.location {
-                    Location::Position3d(pos) => {
-                        x.create_element("Point").write_inner_content(|x| {
-                            x.create_element("extrude")
-                                .write_text_content(BytesText::new("false"))?;
-                            x.create_element("altitudeMode")
-                                .write_text_content(BytesText::new("absolute"))?;
-                            x.create_element("coordinates")
-                                .write_text_content(BytesText::new(&format!(
-                                    "{},{},{}",
-                                    pos.lon, pos.lat, pos.height
-                                )))?;
+                if let Some(location) = &record.location {
+                    match location {
+                        Location::Position3d(pos) => {
+                            x.create_element("Point").write_inner_content(|x| {
+                                x.create_element("extrude")
+                                    .write_text_content(BytesText::new("false"))?;
+                                x.create_element("altitudeMode")
+                                    .write_text_content(BytesText::new("absolute"))?;
+                                x.create_element("coordinates").write_text_content(
+                                    BytesText::new(&format!(
+                                        "{},{},{}",
+                                        pos.lon, pos.lat, pos.height
+                                    )),
+                                )?;
 
-                            Ok(())
-                        })?;
-                    }
-                    Location::Position2d(pos) => {
-                        x.create_element("Point").write_inner_content(|x| {
-                            x.create_element("extrude")
-                                .write_text_content(BytesText::new("false"))?;
-                            x.create_element("altitudeMode")
-                                .write_text_content(BytesText::new("clampToGround"))?;
-                            x.create_element("coordinates")
-                                .write_text_content(BytesText::new(&format!(
-                                    "{},{},0",
-                                    pos.lon, pos.lat
-                                )))?;
+                                Ok(())
+                            })?;
+                        }
+                        Location::Position2d(pos) => {
+                            x.create_element("Point").write_inner_content(|x| {
+                                x.create_element("extrude")
+                                    .write_text_content(BytesText::new("false"))?;
+                                x.create_element("altitudeMode")
+                                    .write_text_content(BytesText::new("clampToGround"))?;
+                                x.create_element("coordinates").write_text_content(
+                                    BytesText::new(&format!("{},{},0", pos.lon, pos.lat)),
+                                )?;
 
-                            Ok(())
-                        })?;
-                    }
-                    Location::BearingElevationDistance {
-                        bearing,
-                        elevation,
-                        distance,
-                    } => {
-                        point_from_bearing_elevation_distance(
-                            x,
-                            record.cuas_location.unwrap_or(static_cuas_origin),
-                            *bearing,
-                            *elevation,
-                            *distance,
-                        )?;
-                    }
-                    Location::BearingElevation { bearing, elevation } => {
-                        ray_from_bearing_elevation(
-                            x,
-                            record.cuas_location.unwrap_or(static_cuas_origin),
-                            *bearing,
-                            *elevation,
-                        )?;
-                    }
-                    Location::Bearing(bearing) => {
-                        ray_from_bearing(
-                            x,
-                            record.cuas_location.unwrap_or(static_cuas_origin),
-                            *bearing,
-                        )?;
-                    }
-                    Location::Quad(quad) => {
-                        let (bearing_from, bearing_to) = match quad {
-                            courageous_format::Quad::North => (45., -45.),
-                            courageous_format::Quad::East => (135., 45.),
-                            courageous_format::Quad::South => (225., 135.),
-                            courageous_format::Quad::West => (315., 225.),
-                        };
-                        create_arc_polygon(x, bearing_from, bearing_to, static_cuas_origin)?;
-                    }
-                    Location::Arc(Arc { from, to }) => {
-                        create_arc_polygon(x, *from, *to, static_cuas_origin)?;
+                                Ok(())
+                            })?;
+                        }
+                        Location::BearingElevationDistance {
+                            bearing,
+                            elevation,
+                            distance,
+                        } => {
+                            point_from_bearing_elevation_distance(
+                                x,
+                                record.cuas_location.unwrap_or(static_cuas_origin),
+                                *bearing,
+                                *elevation,
+                                *distance,
+                            )?;
+                        }
+                        Location::BearingElevation { bearing, elevation } => {
+                            ray_from_bearing_elevation(
+                                x,
+                                record.cuas_location.unwrap_or(static_cuas_origin),
+                                *bearing,
+                                *elevation,
+                            )?;
+                        }
+                        Location::Bearing(bearing) => {
+                            ray_from_bearing(
+                                x,
+                                record.cuas_location.unwrap_or(static_cuas_origin),
+                                *bearing,
+                            )?;
+                        }
+                        Location::Quad(quad) => {
+                            let (bearing_from, bearing_to) = match quad {
+                                courageous_format::Quad::North => (45., -45.),
+                                courageous_format::Quad::East => (135., 45.),
+                                courageous_format::Quad::South => (225., 135.),
+                                courageous_format::Quad::West => (315., 225.),
+                            };
+                            create_arc_polygon(x, bearing_from, bearing_to, static_cuas_origin)?;
+                        }
+                        Location::Arc(Arc { from, to }) => {
+                            create_arc_polygon(x, *from, *to, static_cuas_origin)?;
+                        }
                     }
                 }
 

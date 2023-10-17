@@ -1,6 +1,6 @@
 [package]
 name = "track2kml"
-version = "0.3.0"
+version = "0.4.0"
 edition = "2021"
 authors = [
     "Alejandro Perea (aleok.inf@gmail.com)",
@@ -21,7 +21,7 @@ serde_path_to_error = "0.1.10"
 thiserror = "1.0.38"
 time = { version = "0.3.19", features = ["parsing", "formatting", "macros"] }
 map_3d = { version = "0.1.5" }
-courageous-format = { git = "https://github.com/COURAGEOUS-isf/format.git", tag = "v0.4.1+schema.0.3.2" }
+courageous-format = { git = "https://github.com/COURAGEOUS-isf/format.git", tag = "v0.6.0+schema.0.4.0" }
 
 [dev-dependencies]
 anyhow = { version = "1.0.69", features = ["backtrace"] }
