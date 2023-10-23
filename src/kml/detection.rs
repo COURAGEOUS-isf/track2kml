@@ -126,7 +126,7 @@ pub fn write_detection(
                                 ray_length,
                             )?;
                         }
-                        Location::Bearing(bearing) => {
+                        Location::Bearing { bearing } => {
                             ray_from_bearing(
                                 x,
                                 record.cuas_location.unwrap_or(static_cuas_origin),
@@ -134,7 +134,7 @@ pub fn write_detection(
                                 ray_length,
                             )?;
                         }
-                        Location::Quad(quad) => {
+                        Location::Quad { quad } => {
                             let (bearing_from, bearing_to) = match quad {
                                 courageous_format::Quad::North => (45., -45.),
                                 courageous_format::Quad::East => (135., 45.),
