@@ -74,9 +74,10 @@ pub fn run(formats: &HashMap<&'static str, Format>, allow_to_courageous_option: 
         #[arg(long)]
         no_track_icons: bool,
 
-        /// Maximum distance from the C-UAS where objects can be detected.
-        /// It is used for the length of rays in meters in systems that represent position with BearingElevation or Bearing,
-        /// or the radius of arcs for Arc or Quad.
+        /// Maximum distance from the C-UAS where objects can be detected, in meters.
+        ///
+        /// Used for the length of rays and radii of arcs in systems that represent position with BearingElevation, Bearing,
+        /// Arc or Quad.
         #[arg(long, short = 'r')]
         cuas_range: Option<f64>,
     }

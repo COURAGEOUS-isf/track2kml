@@ -1,5 +1,6 @@
 ## 2.3.1
-- Implement CUAS range parameter for BearingElevation, Bearing, Arc and Quad
+- Implement `--cuas-range <RANGE>` optional parameter for specifying the length of rays and arcs drawn with
+BearingElevation, Bearing, Arc and Quad locations.
 
 ## 2.3.0
 - Update COURAGEOUS schema support to v0.4.0
