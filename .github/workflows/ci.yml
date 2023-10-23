@@ -27,7 +27,7 @@ jobs:
       - name: Changelog check
         uses: Zomzog/changelog-checker@v1.2.0
         with:
-          fileName: myChangelog.md
+          fileName: CHANGELOG.md
           noChangelogLabel: no changelog
           checkNotification: Simple
         env:
