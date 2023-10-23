@@ -167,10 +167,9 @@ fn process_to_kml(
     write_as_kml(
         database,
         output_file,
-        WriteAsKmlOptions {
-            disable_track_icons,
-            ray_length,
-        },
+        WriteAsKmlOptions::default()
+            .disable_track_icons(disable_track_icons)
+            .ray_length(ray_length),
     )?;
 
     Ok(output_path)

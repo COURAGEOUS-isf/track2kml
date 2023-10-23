@@ -25,6 +25,17 @@ pub struct WriteAsKmlOptions {
     pub ray_length: f64,
 }
 
+impl WriteAsKmlOptions {
+    pub fn disable_track_icons(mut self, val: bool) -> WriteAsKmlOptions {
+        self.disable_track_icons = val;
+        self
+    }
+    pub fn ray_length(mut self, val: f64) -> WriteAsKmlOptions {
+        self.ray_length = val;
+        self
+    }
+}
+
 pub fn write_as_kml(
     database: Database,
     writer: impl std::io::Write,
@@ -46,7 +57,12 @@ pub fn write_as_kml(
                     database.static_cuas_location.clone(),
                     ray_length,
                 )?;
-                write_track_set(x, &database.tracks, database.static_cuas_location.clone(),ray_length)?;
+                write_track_set(
+                    x,
+                    &database.tracks,
+                    database.static_cuas_location.clone(),
+                    ray_length,
+                )?;
                 write_cuas_origin(x, database.static_cuas_location.clone())?;
 
                 Ok(())
