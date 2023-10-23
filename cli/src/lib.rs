@@ -73,6 +73,13 @@ pub fn run(formats: &HashMap<&'static str, Format>, allow_to_courageous_option: 
         /// When exporting to KML: Hide all track icons, and only show their path or ray.
         #[arg(long)]
         no_track_icons: bool,
+
+        /// Maximum distance from the C-UAS where objects can be detected, in meters.
+        ///
+        /// Used for the length of rays and radii of arcs in systems that represent position with BearingElevation, Bearing,
+        /// Arc or Quad.
+        #[arg(long, short = 'r')]
+        cuas_range: Option<f64>,
     }
 
     let cmd = Args::command()
@@ -154,12 +161,18 @@ fn process_to_kml(
     let output_path = input_path.with_extension("kml");
     let output_file = BufWriter::new(File::create(&output_path)?);
     let disable_track_icons = args.get_flag("no_track_icons");
+    let cuas_range = *args
+        .try_get_one("cuas_range")
+        .ok()
+        .flatten()
+        .unwrap_or(&100.);
+
     write_as_kml(
         database,
         output_file,
-        WriteAsKmlOptions {
-            disable_track_icons,
-        },
+        WriteAsKmlOptions::default()
+            .disable_track_icons(disable_track_icons)
+            .cuas_range(cuas_range),
     )?;
 
     Ok(output_path)

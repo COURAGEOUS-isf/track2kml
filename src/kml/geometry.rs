@@ -8,8 +8,9 @@ pub fn ray_from_bearing(
     x: &mut Writer<impl Write>,
     cuas_origin: Position3d,
     bearing: f64,
+    cuas_range: f64,
 ) -> Result<(), quick_xml::Error> {
-    let target = distance_from_position(cuas_origin, bearing, 0., 100.);
+    let target = distance_from_position(cuas_origin, bearing, 0., cuas_range);
     x.create_element("LineString").write_inner_content(|x| {
         x.create_element("extrude")
             .write_text_content(BytesText::new("0"))?;
@@ -38,8 +39,9 @@ pub fn ray_from_bearing_elevation(
     cuas_origin: Position3d,
     bearing: f64,
     elevation: f64,
+    cuas_range: f64,
 ) -> Result<(), quick_xml::Error> {
-    let target = distance_from_position(cuas_origin, bearing, elevation, 100.);
+    let target = distance_from_position(cuas_origin, bearing, elevation, cuas_range);
     x.create_element("LineString").write_inner_content(|x| {
         x.create_element("extrude")
             .write_text_content(BytesText::new("0"))?;
@@ -92,6 +94,7 @@ pub fn create_arc_polygon(
     bearing_from: f64,
     bearing_to: f64,
     static_cuas_origin: Position3d,
+    cuas_range: f64,
 ) -> Result<(), quick_xml::Error> {
     x.create_element("Polygon").write_inner_content(|x| {
         x.create_element("extrude")
@@ -104,12 +107,11 @@ pub fn create_arc_polygon(
             .write_inner_content(|x| {
                 x.create_element("LinearRing").write_inner_content(|x| {
                     const ARC_POINT_COUNT: usize = 64;
-                    const ARC_RADIUS: f64 = 100.;
 
                     let arc_points = (0..ARC_POINT_COUNT).map(|idx| {
                         let angle_deg = bearing_from
                             + (bearing_to - bearing_from) * (idx as f64 / ARC_POINT_COUNT as f64);
-                        (angle_deg.to_radians(), 0., ARC_RADIUS)
+                        (angle_deg.to_radians(), 0., cuas_range)
                     });
 
                     let points = std::iter::once((

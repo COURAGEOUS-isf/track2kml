@@ -1,6 +1,8 @@
 ## 2.3.0
 - Update COURAGEOUS schema support to v0.4.0
 - Implement CUAS location representation.
+- Implement `--cuas-range <RANGE>` optional parameter for specifying the length of rays and arcs drawn with
+BearingElevation, Bearing, Arc and Quad locations.
 
 ## 2.2.0
 - Update COURAGEOUS schema support to v0.3.1
