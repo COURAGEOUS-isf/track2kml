@@ -74,9 +74,11 @@ pub fn run(formats: &HashMap<&'static str, Format>, allow_to_courageous_option: 
         #[arg(long)]
         no_track_icons: bool,
 
-        /// Length of ray in meters for systems that represent position with BearingElevation.
-        #[arg(long)]
-        ray_length: Option<f64>,
+        /// Maximum distance from the C-UAS where objects can be detected.
+        /// It is used for the length of rays in meters in systems that represent position with BearingElevation or Bearing,
+        /// or the radius of arcs for Arc or Quad.
+        #[arg(long, short = 'r')]
+        cuas_range: Option<f64>,
     }
 
     let cmd = Args::command()
@@ -158,8 +160,8 @@ fn process_to_kml(
     let output_path = input_path.with_extension("kml");
     let output_file = BufWriter::new(File::create(&output_path)?);
     let disable_track_icons = args.get_flag("no_track_icons");
-    let ray_length = *args
-        .try_get_one("ray_length")
+    let cuas_range = *args
+        .try_get_one("cuas_range")
         .ok()
         .flatten()
         .unwrap_or(&100.);
@@ -169,7 +171,7 @@ fn process_to_kml(
         output_file,
         WriteAsKmlOptions::default()
             .disable_track_icons(disable_track_icons)
-            .ray_length(ray_length),
+            .cuas_range(cuas_range),
     )?;
 
     Ok(output_path)

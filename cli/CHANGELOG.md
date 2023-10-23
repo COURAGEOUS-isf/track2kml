@@ -1,3 +1,6 @@
+## 2.3.1
+- Implement CUAS range parameter for BearingElevation, Bearing, Arc and Quad
+
 ## 2.3.0
 - Update COURAGEOUS schema support to v0.4.0
 - Implement CUAS location representation.

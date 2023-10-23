@@ -22,7 +22,7 @@ const KML_DOCUMENT_ATTRIBUTES: [(&str, &str); 2] = [
 #[non_exhaustive]
 pub struct WriteAsKmlOptions {
     pub disable_track_icons: bool,
-    pub ray_length: f64,
+    pub cuas_range: f64,
 }
 
 impl WriteAsKmlOptions {
@@ -30,8 +30,8 @@ impl WriteAsKmlOptions {
         self.disable_track_icons = val;
         self
     }
-    pub fn ray_length(mut self, val: f64) -> WriteAsKmlOptions {
-        self.ray_length = val;
+    pub fn cuas_range(mut self, val: f64) -> WriteAsKmlOptions {
+        self.cuas_range = val;
         self
     }
 }
@@ -42,7 +42,7 @@ pub fn write_as_kml(
     options: WriteAsKmlOptions,
 ) -> anyhow::Result<()> {
     let mut xml = Writer::new(writer);
-    let ray_length = options.ray_length;
+    let cuas_range = options.cuas_range;
     xml.write_bom()?;
     xml.create_element("kml")
         .with_attributes(KML_DOCUMENT_ATTRIBUTES)
@@ -55,13 +55,13 @@ pub fn write_as_kml(
                     x,
                     &database.detection,
                     database.static_cuas_location.clone(),
-                    ray_length,
+                    cuas_range,
                 )?;
                 write_track_set(
                     x,
                     &database.tracks,
                     database.static_cuas_location.clone(),
-                    ray_length,
+                    cuas_range,
                 )?;
                 write_cuas_origin(x, database.static_cuas_location.clone())?;
 
