@@ -89,6 +89,7 @@ pub fn write_track<W: std::io::Write>(
                             record.cuas_location.unwrap_or(static_cuas_origin),
                             bearing,
                             elevation,
+                            ray_length,
                         )?;
                     }
                     Location::Bearing(bearing) => {
@@ -96,6 +97,7 @@ pub fn write_track<W: std::io::Write>(
                             x,
                             record.cuas_location.unwrap_or(static_cuas_origin),
                             bearing,
+                            ray_length,
                         )?;
                     }
                     Location::Quad(quad) => {
