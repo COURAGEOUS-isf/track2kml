@@ -18,9 +18,11 @@ const KML_DOCUMENT_ATTRIBUTES: [(&str, &str); 2] = [
     ("xmlns:gx", "http://www.google.com/kml/ext/2.2"),
 ];
 
-#[derive(Clone)]
+#[derive(Clone, Default)]
+#[non_exhaustive]
 pub struct WriteAsKmlOptions {
     pub disable_track_icons: bool,
+    pub ray_length: f64,
 }
 
 pub fn write_as_kml(
@@ -29,6 +31,7 @@ pub fn write_as_kml(
     options: WriteAsKmlOptions,
 ) -> anyhow::Result<()> {
     let mut xml = Writer::new(writer);
+    let ray_length = options.ray_length;
     xml.write_bom()?;
     xml.create_element("kml")
         .with_attributes(KML_DOCUMENT_ATTRIBUTES)
@@ -41,8 +44,9 @@ pub fn write_as_kml(
                     x,
                     &database.detection,
                     database.static_cuas_location.clone(),
+                    ray_length,
                 )?;
-                write_track_set(x, &database.tracks, database.static_cuas_location.clone())?;
+                write_track_set(x, &database.tracks, database.static_cuas_location.clone(),ray_length)?;
                 write_cuas_origin(x, database.static_cuas_location.clone())?;
 
                 Ok(())

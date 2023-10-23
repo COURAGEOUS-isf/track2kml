@@ -4,12 +4,14 @@ use courageous_format::Position3d;
 use map_3d::{aer2geodetic, Ellipsoid};
 use quick_xml::{events::BytesText, Writer};
 
+
 pub fn ray_from_bearing(
     x: &mut Writer<impl Write>,
     cuas_origin: Position3d,
     bearing: f64,
+    ray_length: f64,
 ) -> Result<(), quick_xml::Error> {
-    let target = distance_from_position(cuas_origin, bearing, 0., 100.);
+    let target = distance_from_position(cuas_origin, bearing, 0., ray_length);
     x.create_element("LineString").write_inner_content(|x| {
         x.create_element("extrude")
             .write_text_content(BytesText::new("0"))?;
@@ -38,8 +40,9 @@ pub fn ray_from_bearing_elevation(
     cuas_origin: Position3d,
     bearing: f64,
     elevation: f64,
+    ray_length: f64,
 ) -> Result<(), quick_xml::Error> {
-    let target = distance_from_position(cuas_origin, bearing, elevation, 100.);
+    let target = distance_from_position(cuas_origin, bearing, elevation, ray_length);
     x.create_element("LineString").write_inner_content(|x| {
         x.create_element("extrude")
             .write_text_content(BytesText::new("0"))?;

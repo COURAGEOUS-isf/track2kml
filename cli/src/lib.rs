@@ -73,6 +73,10 @@ pub fn run(formats: &HashMap<&'static str, Format>, allow_to_courageous_option: 
         /// When exporting to KML: Hide all track icons, and only show their path or ray.
         #[arg(long)]
         no_track_icons: bool,
+
+        /// Length of ray in meters for systems that represent position with BearingElevation.
+        #[arg(long)]
+        ray_length: Option<f64>,
     }
 
     let cmd = Args::command()
@@ -154,11 +158,18 @@ fn process_to_kml(
     let output_path = input_path.with_extension("kml");
     let output_file = BufWriter::new(File::create(&output_path)?);
     let disable_track_icons = args.get_flag("no_track_icons");
+    let ray_length = *args
+        .try_get_one("ray_length")
+        .ok()
+        .flatten()
+        .unwrap_or(&100.);
+
     write_as_kml(
         database,
         output_file,
         WriteAsKmlOptions {
             disable_track_icons,
+            ray_length,
         },
     )?;
 

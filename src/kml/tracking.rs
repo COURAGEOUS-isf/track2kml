@@ -14,13 +14,14 @@ pub fn write_track_set(
     x: &mut Writer<impl std::io::Write>,
     set: &[Track],
     static_cuas_origin: Position3d,
+    ray_length: f64,
 ) -> Result<(), quick_xml::Error> {
     x.create_element("Folder").write_inner_content(|x| {
         x.create_element("name")
             .write_text_content(BytesText::new("Tracks"))?;
 
         for detection in set {
-            write_track(x, detection, static_cuas_origin)?;
+            write_track(x, detection, static_cuas_origin, ray_length)?;
         }
 
         Ok(())
@@ -33,6 +34,7 @@ pub fn write_track<W: std::io::Write>(
     x: &mut Writer<W>,
     track: &Track,
     static_cuas_origin: Position3d,
+    ray_length: f64,
 ) -> Result<(), quick_xml::Error> {
     x.create_element("Folder").write_inner_content(|x| {
         x.create_element("name").write_text_content(BytesText::new(

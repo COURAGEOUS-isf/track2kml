@@ -14,13 +14,14 @@ pub fn write_detection_set(
     x: &mut Writer<impl std::io::Write>,
     set: &[Detection],
     static_cuas_origin: Position3d,
+    ray_length: f64,
 ) -> Result<(), quick_xml::Error> {
     x.create_element("Folder").write_inner_content(|x| {
         x.create_element("name")
             .write_text_content(BytesText::new("Detection Sets"))?;
 
         for detection in set {
-            write_detection(x, detection, static_cuas_origin)?;
+            write_detection(x, detection, static_cuas_origin,ray_length)?;
         }
 
         Ok(())
@@ -33,6 +34,7 @@ pub fn write_detection(
     x: &mut Writer<impl std::io::Write>,
     detection: &Detection,
     static_cuas_origin: Position3d,
+    ray_length: f64,
 ) -> Result<(), quick_xml::Error> {
     x.create_element("Folder").write_inner_content(|x| {
         x.create_element("name").write_text_content(BytesText::new(
@@ -121,6 +123,7 @@ pub fn write_detection(
                                 record.cuas_location.unwrap_or(static_cuas_origin),
                                 *bearing,
                                 *elevation,
+                                ray_length,
                             )?;
                         }
                         Location::Bearing(bearing) => {
@@ -128,6 +131,7 @@ pub fn write_detection(
                                 x,
                                 record.cuas_location.unwrap_or(static_cuas_origin),
                                 *bearing,
+                                ray_length,
                             )?;
                         }
                         Location::Quad(quad) => {
