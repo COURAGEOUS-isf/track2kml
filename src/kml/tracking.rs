@@ -8,6 +8,7 @@ use super::{
         create_arc_polygon, point_from_bearing_elevation_distance, ray_from_bearing,
         ray_from_bearing_elevation,
     },
+    uav_home_location::write_uav_home_location,
 };
 
 pub fn write_track_set(
@@ -42,6 +43,10 @@ pub fn write_track<W: std::io::Write>(
         ))?;
 
         let records = track.records.iter().peekable();
+
+        if let Some(uav_home_location) = track.uav_home_location.clone() {
+            write_uav_home_location(x, uav_home_location.clone())?;
+        };
 
         for record in records {
             if matches!(
