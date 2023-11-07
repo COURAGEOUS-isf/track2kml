@@ -12,6 +12,7 @@ mod ext_data;
 mod geometry;
 mod style;
 mod tracking;
+mod uav_home_location;
 
 const KML_DOCUMENT_ATTRIBUTES: [(&str, &str); 2] = [
     ("xmlns", "http://www.opengis.net/kml/2.2"),

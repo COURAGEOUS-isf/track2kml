@@ -8,6 +8,7 @@ use super::{
         create_arc_polygon, point_from_bearing_elevation_distance, ray_from_bearing,
         ray_from_bearing_elevation,
     },
+    uav_home_location::write_uav_home_location,
 };
 
 pub fn write_detection_set(
@@ -48,6 +49,9 @@ pub fn write_detection(
                     .map(|x| x.to_string())
                     .unwrap_or_else(|| "None".to_owned())
             )))?;
+        if let Some(uav_home_location) = detection.uav_home_location {
+            write_uav_home_location(x, uav_home_location)?;
+        };
 
         for record in detection
             .records
