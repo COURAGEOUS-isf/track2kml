@@ -49,8 +49,8 @@ pub fn write_detection(
                     .map(|x| x.to_string())
                     .unwrap_or_else(|| "None".to_owned())
             )))?;
-        if let Some(uav_home_location) = detection.uav_home_location.clone() {
-            write_uav_home_location(x, uav_home_location.clone())?;
+        if let Some(uav_home_location) = detection.uav_home_location {
+            write_uav_home_location(x, uav_home_location)?;
         };
 
         for record in detection

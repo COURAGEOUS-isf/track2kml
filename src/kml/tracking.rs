@@ -44,8 +44,8 @@ pub fn write_track<W: std::io::Write>(
 
         let records = track.records.iter().peekable();
 
-        if let Some(uav_home_location) = track.uav_home_location.clone() {
-            write_uav_home_location(x, uav_home_location.clone())?;
+        if let Some(uav_home_location) = track.uav_home_location {
+            write_uav_home_location(x, uav_home_location)?;
         };
 
         for record in records {
