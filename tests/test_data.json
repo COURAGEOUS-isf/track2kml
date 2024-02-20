@@ -1,0 +1,3434 @@
+{
+    "detection": [
+        {
+            "records": [
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.59427499999998,
+                        "elevation": 2.661875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 0,
+                    "time": 1696421440231
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.60989999999998,
+                        "elevation": 2.661875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 1,
+                    "time": 1696421440786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.62552499999998,
+                        "elevation": 2.693125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 2,
+                    "time": 1696421441897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.64114999999998,
+                        "elevation": 2.74,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 3,
+                    "time": 1696421443008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.64114999999998,
+                        "elevation": 2.8025,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 4,
+                    "time": 1696421444675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.64114999999998,
+                        "elevation": 2.865,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 5,
+                    "time": 1696421445786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.65677499999998,
+                        "elevation": 2.911875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 6,
+                    "time": 1696421446897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.65677499999998,
+                        "elevation": 2.974375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 7,
+                    "time": 1696421448008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.67239999999998,
+                        "elevation": 3.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 8,
+                    "time": 1696421449675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.68802499999998,
+                        "elevation": 3.130625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 9,
+                    "time": 1696421450786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.68802499999998,
+                        "elevation": 3.193125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 10,
+                    "time": 1696421451897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.68802499999998,
+                        "elevation": 3.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 11,
+                    "time": 1696421453008
+                }
+            ]
+        }
+    ],
+    "static_cuas_location": {
+        "height_amsl": 13.8,
+        "lat": 51.15683,
+        "lon": 2.73865
+    },
+    "system_name": "Test System",
+    "tracks": [
+        {
+            "name": "108",
+            "records": [
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.59427499999998,
+                        "elevation": 2.661875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 0,
+                    "time": 1696421440231
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.60989999999998,
+                        "elevation": 2.661875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 1,
+                    "time": 1696421440786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.62552499999998,
+                        "elevation": 2.693125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 2,
+                    "time": 1696421441897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.64114999999998,
+                        "elevation": 2.74,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 3,
+                    "time": 1696421443008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.64114999999998,
+                        "elevation": 2.8025,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 4,
+                    "time": 1696421444675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.64114999999998,
+                        "elevation": 2.865,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 5,
+                    "time": 1696421445786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.65677499999998,
+                        "elevation": 2.911875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 6,
+                    "time": 1696421446897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.65677499999998,
+                        "elevation": 2.974375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 7,
+                    "time": 1696421448008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.67239999999998,
+                        "elevation": 3.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 8,
+                    "time": 1696421449675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.68802499999998,
+                        "elevation": 3.130625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 9,
+                    "time": 1696421450786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.68802499999998,
+                        "elevation": 3.193125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 10,
+                    "time": 1696421451897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.68802499999998,
+                        "elevation": 3.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 11,
+                    "time": 1696421453008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.68802499999998,
+                        "elevation": 3.349375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 12,
+                    "time": 1696421454119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.67239999999998,
+                        "elevation": 3.474375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 13,
+                    "time": 1696421455786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.65677499999998,
+                        "elevation": 3.568125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 14,
+                    "time": 1696421456897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.65677499999998,
+                        "elevation": 3.64625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 15,
+                    "time": 1696421458008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.62552499999998,
+                        "elevation": 3.724375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 16,
+                    "time": 1696421459119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.59427499999998,
+                        "elevation": 3.849375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 17,
+                    "time": 1696421460786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.57864999999998,
+                        "elevation": 3.9275,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 18,
+                    "time": 1696421461897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.57864999999998,
+                        "elevation": 4.02125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 19,
+                    "time": 1696421463008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.57864999999998,
+                        "elevation": 4.099375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 20,
+                    "time": 1696421464119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.56302499999998,
+                        "elevation": 4.1775,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 21,
+                    "time": 1696421465230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.57864999999998,
+                        "elevation": 4.3025,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 22,
+                    "time": 1696421466897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.57864999999998,
+                        "elevation": 4.39625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 23,
+                    "time": 1696421468008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.59427499999998,
+                        "elevation": 4.474375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 24,
+                    "time": 1696421469119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.60989999999998,
+                        "elevation": 4.568125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 25,
+                    "time": 1696421470230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.62552499999998,
+                        "elevation": 4.661875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 26,
+                    "time": 1696421471342
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.64114999999998,
+                        "elevation": 4.83375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 27,
+                    "time": 1696421473008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.67239999999998,
+                        "elevation": 4.9275,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 28,
+                    "time": 1696421474119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.68802499999998,
+                        "elevation": 5.02125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 29,
+                    "time": 1696421475230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.73489999999998,
+                        "elevation": 5.115,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 30,
+                    "time": 1696421476341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.75052499999998,
+                        "elevation": 5.1775,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 31,
+                    "time": 1696421477453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.78177499999998,
+                        "elevation": 5.349375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 32,
+                    "time": 1696421479119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.81302499999998,
+                        "elevation": 5.49,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 33,
+                    "time": 1696421480230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.87552499999998,
+                        "elevation": 5.568125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 34,
+                    "time": 1696421481341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 243.93802499999998,
+                        "elevation": 5.6775,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 35,
+                    "time": 1696421482453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 244.03177499999998,
+                        "elevation": 5.8025,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 36,
+                    "time": 1696421483564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 244.18802499999998,
+                        "elevation": 6.005625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 37,
+                    "time": 1696421485230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 244.31302499999998,
+                        "elevation": 6.1775,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 38,
+                    "time": 1696421486341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 244.43802499999998,
+                        "elevation": 6.33375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 39,
+                    "time": 1696421487453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 244.59427499999998,
+                        "elevation": 6.49,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 40,
+                    "time": 1696421488564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 244.76614999999998,
+                        "elevation": 6.661875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 41,
+                    "time": 1696421489675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 245.04739999999998,
+                        "elevation": 6.99,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 42,
+                    "time": 1696421491341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 245.21927499999998,
+                        "elevation": 7.24,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 43,
+                    "time": 1696421492453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 245.43802499999998,
+                        "elevation": 7.536875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 44,
+                    "time": 1696421493564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 245.60989999999998,
+                        "elevation": 7.865,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 45,
+                    "time": 1696421494675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 245.78177499999998,
+                        "elevation": 8.24,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 46,
+                    "time": 1696421495786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 246.03177499999998,
+                        "elevation": 8.83375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 47,
+                    "time": 1696421497453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 246.18802499999998,
+                        "elevation": 9.255625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 48,
+                    "time": 1696421498564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 246.37552499999998,
+                        "elevation": 9.693125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 49,
+                    "time": 1696421499675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 246.56302499999998,
+                        "elevation": 10.14625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 50,
+                    "time": 1696421500786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 246.76614999999998,
+                        "elevation": 10.615,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 51,
+                    "time": 1696421501897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 247.14114999999998,
+                        "elevation": 11.33375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 52,
+                    "time": 1696421503564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 247.40677499999998,
+                        "elevation": 11.818125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 53,
+                    "time": 1696421504675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 247.71927499999998,
+                        "elevation": 12.365,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 54,
+                    "time": 1696421505786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 248.04739999999998,
+                        "elevation": 12.943125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 55,
+                    "time": 1696421506897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 248.39114999999998,
+                        "elevation": 13.599375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 56,
+                    "time": 1696421508008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 248.71927499999998,
+                        "elevation": 14.1775,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 57,
+                    "time": 1696421509675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 249.04739999999998,
+                        "elevation": 14.77125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 58,
+                    "time": 1696421510786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 249.37552499999998,
+                        "elevation": 15.365,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 59,
+                    "time": 1696421511897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 249.70364999999998,
+                        "elevation": 15.95875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 60,
+                    "time": 1696421513008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 250.03177499999998,
+                        "elevation": 16.552500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 61,
+                    "time": 1696421514119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 250.35989999999998,
+                        "elevation": 17.146250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 62,
+                    "time": 1696421515230
+                }
+            ],
+            "uas_id": 3
+        },
+        {
+            "name": "1287",
+            "records": [
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 241.65677499999998,
+                        "elevation": 1.0368750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 63,
+                    "time": 1696421621897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 241.65677499999998,
+                        "elevation": 1.0368750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 64,
+                    "time": 1696421623563
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 241.65677499999998,
+                        "elevation": 1.0212500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 65,
+                    "time": 1696421624674
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 241.64114999999998,
+                        "elevation": 1.0993750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 66,
+                    "time": 1696421625785
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 241.62552499999998,
+                        "elevation": 1.1462500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 67,
+                    "time": 1696421626896
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 241.60989999999998,
+                        "elevation": 1.1931250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 68,
+                    "time": 1696421628563
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 241.59427499999998,
+                        "elevation": 1.2400000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 69,
+                    "time": 1696421629674
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 241.57864999999998,
+                        "elevation": 1.2868750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 70,
+                    "time": 1696421630785
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 241.56302499999998,
+                        "elevation": 1.3337500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 71,
+                    "time": 1696421632452
+                }
+            ],
+            "uas_id": 3
+        },
+        {
+            "name": "99",
+            "records": [
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 293.750525,
+                        "elevation": -0.025624999999999787,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 72,
+                    "time": 1696421440231
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 286.32865,
+                        "elevation": 0.005625000000000213,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 73,
+                    "time": 1696421656341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 286.313025,
+                        "elevation": 0.021250000000000213,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 74,
+                    "time": 1696421657452
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 286.344275,
+                        "elevation": -0.009999999999999787,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 75,
+                    "time": 1696421658563
+                }
+            ],
+            "uas_id": 3
+        },
+        {
+            "name": "107",
+            "records": [
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 345.281775,
+                        "elevation": -0.4631249999999998,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 76,
+                    "time": 1696421440231
+                }
+            ],
+            "uas_id": 3
+        },
+        {
+            "name": "224",
+            "records": [
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 332.844275,
+                        "elevation": 12.3025,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 77,
+                    "time": 1696421450786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 332.95365,
+                        "elevation": 12.318125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 78,
+                    "time": 1696421451897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 333.01615,
+                        "elevation": 12.3025,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 79,
+                    "time": 1696421453008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 333.125525,
+                        "elevation": 12.318125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 80,
+                    "time": 1696421454119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 333.51615,
+                        "elevation": 12.318125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 81,
+                    "time": 1696421455786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 333.64115,
+                        "elevation": 12.365,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 82,
+                    "time": 1696421456897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 333.750525,
+                        "elevation": 12.365,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 83,
+                    "time": 1696421458008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 333.844275,
+                        "elevation": 12.365,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 84,
+                    "time": 1696421459119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 334.094275,
+                        "elevation": 12.318125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 85,
+                    "time": 1696421460786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 334.375525,
+                        "elevation": 12.365,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 86,
+                    "time": 1696421461897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 334.57865,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 87,
+                    "time": 1696421463008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 334.7349,
+                        "elevation": 12.3025,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 88,
+                    "time": 1696421464119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 334.9224,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 89,
+                    "time": 1696421465230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 335.1724,
+                        "elevation": 12.380625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 90,
+                    "time": 1696421466897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 335.344275,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 91,
+                    "time": 1696421468008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 335.438025,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 92,
+                    "time": 1696421469119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 335.6724,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 93,
+                    "time": 1696421470230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 335.906775,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 94,
+                    "time": 1696421471342
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 336.1099,
+                        "elevation": 12.286875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 95,
+                    "time": 1696421473008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 336.188025,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 96,
+                    "time": 1696421474119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 336.32865,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 97,
+                    "time": 1696421475230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 336.5474,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 98,
+                    "time": 1696421476341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 336.76615,
+                        "elevation": 12.286875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 99,
+                    "time": 1696421477453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 336.95365,
+                        "elevation": 12.286875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 100,
+                    "time": 1696421479119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 337.031775,
+                        "elevation": 12.349375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 101,
+                    "time": 1696421480230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 337.375525,
+                        "elevation": 12.380625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 102,
+                    "time": 1696421481341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 337.531775,
+                        "elevation": 12.380625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 103,
+                    "time": 1696421482453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 337.64115,
+                        "elevation": 12.349375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 104,
+                    "time": 1696421483564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 337.82865,
+                        "elevation": 12.349375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 105,
+                    "time": 1696421485230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 338.000525,
+                        "elevation": 12.349375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 106,
+                    "time": 1696421486341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 338.000525,
+                        "elevation": 12.349375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 107,
+                    "time": 1696421487453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 338.125525,
+                        "elevation": 12.349375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 108,
+                    "time": 1696421488564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 338.219275,
+                        "elevation": 12.349375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 109,
+                    "time": 1696421489675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 338.95365,
+                        "elevation": 12.286875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 110,
+                    "time": 1696421491341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 339.125525,
+                        "elevation": 12.318125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 111,
+                    "time": 1696421492453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 339.313025,
+                        "elevation": 12.20875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 112,
+                    "time": 1696421493564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 339.2974,
+                        "elevation": 12.224375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 113,
+                    "time": 1696421494675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 339.4849,
+                        "elevation": 12.20875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 114,
+                    "time": 1696421495786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 339.625525,
+                        "elevation": 12.193125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 115,
+                    "time": 1696421497453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 339.906775,
+                        "elevation": 12.255625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 116,
+                    "time": 1696421498564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 340.0474,
+                        "elevation": 12.255625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 117,
+                    "time": 1696421499675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 340.313025,
+                        "elevation": 12.24,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 118,
+                    "time": 1696421500786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 340.51615,
+                        "elevation": 12.255625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 119,
+                    "time": 1696421501897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 340.70365,
+                        "elevation": 12.255625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 120,
+                    "time": 1696421503564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 340.82865,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 121,
+                    "time": 1696421504675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 340.95365,
+                        "elevation": 12.27125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 122,
+                    "time": 1696421505786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 341.1724,
+                        "elevation": 12.24,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 123,
+                    "time": 1696421506897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 341.375525,
+                        "elevation": 12.24,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 124,
+                    "time": 1696421508008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 341.563025,
+                        "elevation": 12.224375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 125,
+                    "time": 1696421509675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 341.750525,
+                        "elevation": 12.20875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 126,
+                    "time": 1696421510786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 341.938025,
+                        "elevation": 12.193125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 127,
+                    "time": 1696421511897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 342.344275,
+                        "elevation": 12.193125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 128,
+                    "time": 1696421513008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 342.531775,
+                        "elevation": 12.193125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 129,
+                    "time": 1696421514119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 342.719275,
+                        "elevation": 12.1775,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 130,
+                    "time": 1696421515230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 342.844275,
+                        "elevation": 12.1775,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 131,
+                    "time": 1696421516341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 343.07865,
+                        "elevation": 12.161875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 132,
+                    "time": 1696421517452
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 343.281775,
+                        "elevation": 12.14625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 133,
+                    "time": 1696421518564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 343.531775,
+                        "elevation": 12.130625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 134,
+                    "time": 1696421519675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 343.70365,
+                        "elevation": 12.130625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 135,
+                    "time": 1696421520786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 343.969275,
+                        "elevation": 12.115,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 136,
+                    "time": 1696421522452
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 344.14115,
+                        "elevation": 12.099375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 137,
+                    "time": 1696421523564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 344.313025,
+                        "elevation": 12.099375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 138,
+                    "time": 1696421524675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 344.4849,
+                        "elevation": 12.099375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 139,
+                    "time": 1696421525786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 344.688025,
+                        "elevation": 12.08375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 140,
+                    "time": 1696421526897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 344.875525,
+                        "elevation": 12.08375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 141,
+                    "time": 1696421528008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 345.0474,
+                        "elevation": 12.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 142,
+                    "time": 1696421529119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 345.313025,
+                        "elevation": 12.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 143,
+                    "time": 1696421530786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 345.500525,
+                        "elevation": 12.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 144,
+                    "time": 1696421531897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 345.719275,
+                        "elevation": 12.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 145,
+                    "time": 1696421533008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 345.938025,
+                        "elevation": 12.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 146,
+                    "time": 1696421534119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 346.156775,
+                        "elevation": 12.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 147,
+                    "time": 1696421535786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 346.375525,
+                        "elevation": 12.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 148,
+                    "time": 1696421536897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 346.594275,
+                        "elevation": 12.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 149,
+                    "time": 1696421538008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 346.813025,
+                        "elevation": 12.068125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 150,
+                    "time": 1696421539119
+                }
+            ],
+            "uas_id": 3
+        },
+        {
+            "name": "293",
+            "records": [
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 60.094274999999996,
+                        "elevation": -0.07249999999999979,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 151,
+                    "time": 1696421468008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 60.297399999999996,
+                        "elevation": -0.05687499999999979,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 152,
+                    "time": 1696421469119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 60.531774999999996,
+                        "elevation": -0.025624999999999787,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 153,
+                    "time": 1696421470230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 60.781774999999996,
+                        "elevation": 0.005625000000000213,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 154,
+                    "time": 1696421471342
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 61.188024999999996,
+                        "elevation": 0.05250000000000021,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 155,
+                    "time": 1696421473008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 61.516149999999996,
+                        "elevation": 0.06812500000000021,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 156,
+                    "time": 1696421474119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 61.859899999999996,
+                        "elevation": 0.09937500000000021,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 157,
+                    "time": 1696421475230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 62.172399999999996,
+                        "elevation": 0.09937500000000021,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 158,
+                    "time": 1696421476341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 62.500524999999996,
+                        "elevation": 0.11500000000000021,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 159,
+                    "time": 1696421477453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 63.000524999999996,
+                        "elevation": 0.1306250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 160,
+                    "time": 1696421479119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 63.344274999999996,
+                        "elevation": 0.1462500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 161,
+                    "time": 1696421480230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 63.688024999999996,
+                        "elevation": 0.1618750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 162,
+                    "time": 1696421481341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 64.031775,
+                        "elevation": 0.1775000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 163,
+                    "time": 1696421482453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 64.375525,
+                        "elevation": 0.1931250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 164,
+                    "time": 1696421483564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 64.89115,
+                        "elevation": 0.2243750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 165,
+                    "time": 1696421485230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 65.281775,
+                        "elevation": 0.2400000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 166,
+                    "time": 1696421486341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 65.70365,
+                        "elevation": 0.2556250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 167,
+                    "time": 1696421487453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 65.906775,
+                        "elevation": 0.2868750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 168,
+                    "time": 1696421488564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 66.2349,
+                        "elevation": 0.3181250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 169,
+                    "time": 1696421489675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 66.7349,
+                        "elevation": 0.3337500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 170,
+                    "time": 1696421491341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 67.063025,
+                        "elevation": 0.3493750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 171,
+                    "time": 1696421492453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 67.39115,
+                        "elevation": 0.3493750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 172,
+                    "time": 1696421493564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 67.7349,
+                        "elevation": 0.3650000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 173,
+                    "time": 1696421494675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 68.063025,
+                        "elevation": 0.3806250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 174,
+                    "time": 1696421495786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 68.563025,
+                        "elevation": 0.4118750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 175,
+                    "time": 1696421497453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 68.89115,
+                        "elevation": 0.4275000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 176,
+                    "time": 1696421498564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 69.219275,
+                        "elevation": 0.4587500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 177,
+                    "time": 1696421499675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 69.5474,
+                        "elevation": 0.4743750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 178,
+                    "time": 1696421500786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 69.8599,
+                        "elevation": 0.4900000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 179,
+                    "time": 1696421501897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 70.3599,
+                        "elevation": 0.5212500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 180,
+                    "time": 1696421503564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 70.688025,
+                        "elevation": 0.5368750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 181,
+                    "time": 1696421504675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 71.01615,
+                        "elevation": 0.5525000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 182,
+                    "time": 1696421505786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 71.344275,
+                        "elevation": 0.5525000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 183,
+                    "time": 1696421506897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 71.688025,
+                        "elevation": 0.5681250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 184,
+                    "time": 1696421508008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 72.20365,
+                        "elevation": 0.5993750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 185,
+                    "time": 1696421509675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 72.57865,
+                        "elevation": 0.6150000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 186,
+                    "time": 1696421510786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 72.938025,
+                        "elevation": 0.6150000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 187,
+                    "time": 1696421511897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 73.26615,
+                        "elevation": 0.6306250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 188,
+                    "time": 1696421513008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 73.6099,
+                        "elevation": 0.6462500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 189,
+                    "time": 1696421514119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 73.95365,
+                        "elevation": 0.6462500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 190,
+                    "time": 1696421515230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 74.281775,
+                        "elevation": 0.6462500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 191,
+                    "time": 1696421516341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 74.6099,
+                        "elevation": 0.6306250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 192,
+                    "time": 1696421517452
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 74.938025,
+                        "elevation": 0.6150000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 193,
+                    "time": 1696421518564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 75.250525,
+                        "elevation": 0.5993750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 194,
+                    "time": 1696421519675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 75.563025,
+                        "elevation": 0.5681250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 195,
+                    "time": 1696421520786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 75.875525,
+                        "elevation": 0.5525000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 196,
+                    "time": 1696421522452
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 76.188025,
+                        "elevation": 0.5368750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 197,
+                    "time": 1696421523564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 76.500525,
+                        "elevation": 0.5212500000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 198,
+                    "time": 1696421524675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 76.813025,
+                        "elevation": 0.5056250000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 199,
+                    "time": 1696421525786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 77.125525,
+                        "elevation": 0.4900000000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 200,
+                    "time": 1696421526897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 77.438025,
+                        "elevation": 0.4743750000000002,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 201,
+                    "time": 1696421528008
+                }
+            ],
+            "uas_id": 3
+        },
+        {
+            "name": "372",
+            "records": [
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.719275,
+                        "elevation": 4.505625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 202,
+                    "time": 1696421465230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.625525,
+                        "elevation": 4.49,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 203,
+                    "time": 1696421466897
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.625525,
+                        "elevation": 4.474375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 204,
+                    "time": 1696421468008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.563025,
+                        "elevation": 4.474375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 205,
+                    "time": 1696421469119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.51615,
+                        "elevation": 4.474375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 206,
+                    "time": 1696421470230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.469275,
+                        "elevation": 4.49,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 207,
+                    "time": 1696421471342
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.406775,
+                        "elevation": 4.45875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 208,
+                    "time": 1696421473008
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.39115,
+                        "elevation": 4.45875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 209,
+                    "time": 1696421474119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.344275,
+                        "elevation": 4.45875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 210,
+                    "time": 1696421475230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.375525,
+                        "elevation": 4.505625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 211,
+                    "time": 1696421476341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.281775,
+                        "elevation": 4.443125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 212,
+                    "time": 1696421477453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.2349,
+                        "elevation": 4.443125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 213,
+                    "time": 1696421479119
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.188025,
+                        "elevation": 4.4275,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 214,
+                    "time": 1696421480230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.156775,
+                        "elevation": 4.4275,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 215,
+                    "time": 1696421481341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.125525,
+                        "elevation": 4.443125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 216,
+                    "time": 1696421482453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.094275,
+                        "elevation": 4.443125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 217,
+                    "time": 1696421483564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.031775,
+                        "elevation": 4.4275,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 218,
+                    "time": 1696421485230
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 98.01615,
+                        "elevation": 4.4275,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 219,
+                    "time": 1696421486341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 97.9849,
+                        "elevation": 4.411875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 220,
+                    "time": 1696421487453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 97.95365,
+                        "elevation": 4.411875,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 221,
+                    "time": 1696421488564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 97.89115,
+                        "elevation": 4.39625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 222,
+                    "time": 1696421489675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 97.8599,
+                        "elevation": 4.380625,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 223,
+                    "time": 1696421491341
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 97.813025,
+                        "elevation": 4.365,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 224,
+                    "time": 1696421492453
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 97.76615,
+                        "elevation": 4.349375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 225,
+                    "time": 1696421493564
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 97.719275,
+                        "elevation": 4.33375,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 226,
+                    "time": 1696421494675
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 97.6724,
+                        "elevation": 4.318125,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 227,
+                    "time": 1696421495786
+                },
+                {
+                    "alarm": {
+                        "active": true,
+                        "certainty": 1
+                    },
+                    "classification": "Unknown",
+                    "location": {
+                        "bearing": 97.625525,
+                        "elevation": 4.3025,
+                        "$type": "BearingElevation"
+                    },
+                    "record_number": 228,
+                    "time": 1696421497453
+                }
+            ],
+            "uas_id": 3
+        }
+    ],
+    "version": "0.3.3",
+    "vendor_name": "Test vendor"
+}
