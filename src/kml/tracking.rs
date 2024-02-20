@@ -1,4 +1,4 @@
-use courageous_format::{Arc, Location, Position3d, Track, TrackingRecord};
+use courageous_format::{Arc, Classification, Location, Position3d, Track, TrackingRecord};
 use quick_xml::{events::BytesText, Writer};
 use time::{format_description::well_known::Rfc3339, OffsetDateTime};
 
@@ -21,8 +21,33 @@ pub fn write_track_set(
         x.create_element("name")
             .write_text_content(BytesText::new("Tracks"))?;
 
-        for detection in set {
-            write_track(x, detection, static_cuas_origin, cuas_range)?;
+        for track in set {
+            let filter_track_with_classification =
+                |mut track: Track, classification: Classification| {
+                    track.records.retain(|r| r.classification == classification);
+                    if let Some(name) = &mut track.name {
+                        match classification {
+                            Classification::Unknown => *name += " (Unknown)",
+                            Classification::Uav => *name += " (UAV)",
+                            Classification::Gcs => *name += " (GCS)",
+                            Classification::Other => *name += " (Other)",
+                        }
+                    }
+                    track
+                };
+            const CLASSIFICATIONS: [Classification; 4] = [
+                Classification::Uav,
+                Classification::Gcs,
+                Classification::Other,
+                Classification::Unknown,
+            ];
+            for track in
+                CLASSIFICATIONS.map(|cls| filter_track_with_classification(track.clone(), cls))
+            {
+                if !track.records.is_empty() {
+                    write_track(x, &track, static_cuas_origin, cuas_range)?;
+                }
+            }
         }
 
         Ok(())
