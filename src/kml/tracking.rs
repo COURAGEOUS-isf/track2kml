@@ -25,14 +25,16 @@ pub fn write_track_set(
             let filter_track_with_classification =
                 |mut track: Track, classification: Classification| {
                     track.records.retain(|r| r.classification == classification);
-                    if let Some(name) = &mut track.name {
-                        match classification {
-                            Classification::Unknown => *name += " (Unknown)",
-                            Classification::Uav => *name += " (UAV)",
-                            Classification::Gcs => *name += " (GCS)",
-                            Classification::Other => *name += " (Other)",
-                        }
+                    let name = track
+                        .name
+                        .get_or_insert_with(|| format!("Unnamed track (UAS ID {})", track.uas_id));
+                    match classification {
+                        Classification::Unknown => *name += " (Unknown)",
+                        Classification::Uav => *name += " (UAV)",
+                        Classification::Gcs => *name += " (GCS)",
+                        Classification::Other => *name += " (Other)",
                     }
+
                     track
                 };
             const CLASSIFICATIONS: [Classification; 4] = [
