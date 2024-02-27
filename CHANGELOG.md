@@ -1,4 +1,7 @@
 These refer to the track2kml crate versions.
+## 0.4.2
+- Separate track records by classification: Create one KML track per set of records with the same classification in a COURAGEOUS track.
+
 ## 0.4.1
 - Implement UAV home location representation in kml.
 
