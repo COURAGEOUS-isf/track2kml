@@ -1,3 +1,6 @@
+## 2.5.0
+- Remove `--Hint` argument from cli
+
 ## 2.4.0
 - Separate track records by classification: Create one KML track per set of records with the same classification in a COURAGEOUS track.
 
