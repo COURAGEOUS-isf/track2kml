@@ -48,20 +48,14 @@ impl Format {
     }
 }
 
-pub fn run(formats: &HashMap<&'static str, Format>, allow_to_courageous_option: bool) -> ExitCode {
+pub fn run(formats: &HashMap<&'static str, Format>) -> ExitCode {
     let start_time = std::time::Instant::now();
-
-    let valid_hint_values = formats.keys().copied().collect::<Vec<_>>();
 
     #[derive(Parser)]
     #[command(author, version, about, long_about = None)]
     struct Args {
         /// The path of the file to convert to KML.
         input_path: PathBuf,
-
-        /// Hint the program as to which format the input file is in.
-        #[arg(value_enum, long)]
-        hint: Option<String>,
 
         /// Specify the detection origin (Radar position) in GPS coordinates `lat,lon,height`.
         ///
@@ -84,28 +78,11 @@ pub fn run(formats: &HashMap<&'static str, Format>, allow_to_courageous_option: 
 
     let cmd = Args::command()
         .name("track2kml")
-        .help_template(include_str!("help_template"))
-        .mut_arg("hint", |arg| {
-            arg.value_parser(PossibleValuesParser::new(valid_hint_values.as_slice()))
-        });
-
-    let cmd = if allow_to_courageous_option {
-        cmd.arg(
-            Arg::new("to_courageous")
-                .short('c')
-                .action(clap::ArgAction::SetTrue)
-                .help(format!(
-                    "Convert to COURAGEOUS format (v{}) rather than to KML.",
-                    courageous_format::Version::current().0
-                )),
-        )
-    } else {
-        cmd
-    };
+        .help_template(include_str!("help_template"));
 
     let matches = cmd.clone().get_matches();
 
-    match process(&cmd, &matches, &formats) {
+    match process_to_kml(&cmd, &matches, &formats) {
         Ok(output_path) => {
             textwrap::wrap(
                 &format!(
@@ -126,28 +103,6 @@ pub fn run(formats: &HashMap<&'static str, Format>, allow_to_courageous_option: 
 
             ExitCode::FAILURE
         }
-    }
-}
-
-fn process(
-    cmd: &Command,
-    args: &ArgMatches,
-    formats: &HashMap<&str, Format>,
-) -> Result<PathBuf, anyhow::Error> {
-    if *args
-        .try_get_one("to_courageous")
-        .ok()
-        .flatten()
-        .unwrap_or(&false)
-    {
-        let input_path: &PathBuf = args.get_one("input_path").unwrap();
-        let database = read_input_file(cmd, args, formats, input_path)?;
-        let output_path = input_path.with_extension("json");
-        let output_file = BufWriter::new(File::create(&output_path)?);
-        serde_json::to_writer_pretty(output_file, &database)?;
-        Ok(output_path)
-    } else {
-        process_to_kml(cmd, args, formats)
     }
 }
 
@@ -184,27 +139,15 @@ fn read_input_file(
     formats: &HashMap<&str, Format>,
     input_path: &Path,
 ) -> Result<track2kml::Database, anyhow::Error> {
-    let hint: Option<&String> = args.get_one("hint");
-
-    let formats = if let Some(hint) = hint {
-        if let Some(format) = formats.get(hint.as_str()) {
-            vec![format]
-        } else {
-            // We set possible values on the arg value parser, we should not be able to reach here
-            unreachable!()
-        }
-    } else {
-        // Check extensions
-        formats
-            .values()
-            .filter(|Format { file_ext, .. }| Some(file_ext) == input_path.extension().as_ref())
-            .collect()
-    };
+    let formats: Vec<_> = formats
+        .values()
+        .filter(|Format { file_ext, .. }| Some(file_ext) == input_path.extension().as_ref())
+        .collect(); // Check extensions
 
     if formats.is_empty() {
         return Err(anyhow::anyhow!(
             "Could not load input file.\n\
-    Cannot determine format from extension; try using `--hint`"
+    Cannot determine format from extension;"
         ));
     }
 

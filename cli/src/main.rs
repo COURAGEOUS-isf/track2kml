@@ -15,5 +15,5 @@ fn main() -> ExitCode {
         HashMap::from_iter(arr.into_iter())
     };
 
-    track2kml_cli::run(&formats, false)
+    track2kml_cli::run(&formats)
 }
