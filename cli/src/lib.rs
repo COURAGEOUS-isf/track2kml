@@ -1,4 +1,4 @@
-use clap::{builder::PossibleValuesParser, Arg, ArgMatches, Command, CommandFactory, Parser};
+use clap::{ArgMatches, Command, CommandFactory, Parser};
 use colored::Colorize;
 use courageous_format::{Document, Position3d};
 use std::{
