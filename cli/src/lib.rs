@@ -66,7 +66,7 @@ fn read_input_file(
         Err(err) => Err(anyhow::anyhow!(
             "Could not load input file.\n\
         Tried loading it as a {} file, but got the following error: {}",
-            "COURAGEOUS (v0.4)", // ToDo: pass value through external parameter that depends on the format schema version
+            "COURAGEOUS (v0.4)", // TODO: automatically detect COURAGEOUS format version being used
             err
         )),
     }
