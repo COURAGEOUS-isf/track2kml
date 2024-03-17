@@ -6,6 +6,9 @@ use std::{
     path::{Path, PathBuf},
 };
 
+use colored::Colorize;
+use textwrap::Options;
+
 use courageous_format::{Document, Position3d};
 use track2kml::{write_as_kml, WriteAsKmlOptions};
 
@@ -39,14 +42,18 @@ fn read_input_file(
     input_path: &Path,
 ) -> Result<track2kml::Database, anyhow::Error> {
     if input_path.extension().as_ref() != Some(&OsStr::new("json")) {
-        return Err(anyhow::anyhow!(
-            "Could not load input file.\n\
-    Invalid file extension; the file should be json."
-        ));
+        textwrap::wrap(
+            &format!("Unexpected file extention. Expected JSON file.",),
+            Options::new(80)
+                .initial_indent(&format!("{}{} ", "Warning".yellow().bold(), ":".bold()))
+                .subsequent_indent("    "),
+        )
+        .into_iter()
+        .for_each(|line| println!("{}", line));
     }
 
     let file = File::open(input_path)?;
-    let reader = &mut BufReader::new(file);
+    let reader = BufReader::new(file);
     let parser: Result<Document, anyhow::Error> =
         serde_json::from_reader(reader).map_err(anyhow::Error::from);
     match parser {
@@ -59,7 +66,7 @@ fn read_input_file(
         Err(err) => Err(anyhow::anyhow!(
             "Could not load input file.\n\
         Tried loading it as a {} file, but got the following error: {}",
-            "COURAGEOUS (v0.4)", // COURAGEOUS (v0.4) should not be modified manually
+            "COURAGEOUS (v0.4)", // ToDo: pass value through external parameter that depends on the format schema version
             err
         )),
     }
