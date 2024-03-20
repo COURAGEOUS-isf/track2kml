@@ -1,28 +1,8 @@
 # track2kml
 
-Track2kml is an application that converts various drone tracking formats into KML (readable by [Google Earth Pro](https://earth.google.com/intl/earth/download/ge/agree.html)[^1]).
-It also converts to the [COURAGEOUS format](https://grvc.us.es/courageous/).
+Track2kml is an application that converts files in the [COURAGEOUS format](https://grvc.us.es/courageous/) into KML (readable by [Google Earth Pro](https://earth.google.com/intl/earth/download/ge/agree.html)[^1]).
 
 [^1]: The KML file is intended to be viewed on Google Earth Pro. As a result, it may not work as intended on the web version.
-
----
-
-## Currently supported formats
-
-For security concerns, only the appropiate formats on a given build will be available. For specific information about this build's formats, enter `--help` and check the `--hint` parameter's valid values.
-
-### Specific to the 2023 March [COURAGEOUS](https://courageous-isf.eu/) tests (Greece)
-
-- GPX
-- Datcon log files
-- HGH log files
-- ART tracking (+ identification) log files
-- ART detection log files
-- Senhive log files
-
-### Specific to the 2023 October [COURAGEOUS](https://courageous-isf.eu/) and subsequent tests
-
-- COURAGEOUS Format (as described in <https://grvc.us.es/courageous/>) version 0.3.0
 
 ---
 
@@ -31,12 +11,12 @@ For security concerns, only the appropiate formats on a given build will be avai
 The CLI application is really simple to use, and most times will only require the path of the file to convert, e.g.:
 
 ```sh
-track2kml ./test_data/ART_detection_test.log
+track2kml ./courageous_test_file.json
 ```
 
-However, it also has a few other options that can be tweaked, and in some cases their inclusion may be required to convert a file:
+However, it also has a few other options that can be tweaked, for instance:
 
-`--origin`, which describes the radar's static position, is required on all formats except for COURAGEOUS JSON files. Its format is as follows:
+`--origin`, which overrides the radar's static position (`static_cuas_location` on the COURAGEOUS format). Its format is as follows:
 
 ```
 --origin latitude,longitude,height
@@ -44,26 +24,20 @@ However, it also has a few other options that can be tweaked, and in some cases 
 
 Where latitude and longitude are given in decimal degrees and height is given in meters and AMSL. For instance, `--origin 4.3341194,51.4507167,15`.
 
-`--hint` is only necessary if the program fails to identify the format.
-
-`-c` is required when converting to a COURAGEOUS JSON file instead of a KML one.
-
 The full list of options can be found using `track2kml --help`.
 
 ## Examples
-
-Convert `detection_file.log` into the COURAGEOUS format, using 4º20'2.83" as latitude, 51º27'2.58" as longitude and 15m as altitude above sea level:
-
-```sh
-track2kml --origin 4.3341194,51.4507167,15 -c detection_file.log
-```
-
-Convert `tracks.json` into KML, using the radar position written in the file itself (Assuming it is a COURAGEOUS file):
+Convert `tracks.json` into KML, using the radar position written in the file itself:
 
 ```sh
 track2kml detection_file.json
 ```
 
+Convert `data_20_3_24.json` into KML, overriding the origin to 4.3341194º lat, 51.4507167º lon, 15m AMSL, hiding track icons:
+
+```sh
+track2kml --origin 4.3341194,51.4507167,15 --no-track-icons data_20_3_24.json
+```
 ---
 
 ## Support
