@@ -1,3 +1,7 @@
+## 2.5.0
+- Remove `--hint` argument from CLI.
+- Change behaviour of `--origin` such that it overwrites the internal file `static_cuas_location` member.
+
 ## 2.4.0
 - Separate track records by classification: Create one KML track per set of records with the same classification in a COURAGEOUS track.
 
