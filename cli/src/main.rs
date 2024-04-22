@@ -30,6 +30,10 @@ fn main() -> ExitCode {
         #[arg(long)]
         no_track_icons: bool,
 
+        /// When exporting to KML: Ignore the CUAS origin in the file, do not include it.
+        #[arg(long, short = 'i')]
+        ignore_cuas_origin: bool,
+
         /// Maximum distance from the C-UAS where objects can be detected, in meters.
         ///
         /// Used for the length of rays and radii of arcs in systems that represent position with BearingElevation, Bearing,

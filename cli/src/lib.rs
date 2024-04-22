@@ -20,6 +20,7 @@ pub fn process_to_kml(args: &ArgMatches) -> Result<PathBuf, anyhow::Error> {
     let output_path = input_path.with_extension("kml");
     let output_file = BufWriter::new(File::create(&output_path)?);
     let disable_track_icons = args.get_flag("no_track_icons");
+    let ignore_cuas_origin = args.get_flag("ignore_cuas_origin");
     let cuas_range = *args
         .try_get_one("cuas_range")
         .ok()
@@ -31,6 +32,7 @@ pub fn process_to_kml(args: &ArgMatches) -> Result<PathBuf, anyhow::Error> {
         output_file,
         WriteAsKmlOptions::default()
             .disable_track_icons(disable_track_icons)
+            .ignore_cuas_origin(ignore_cuas_origin)
             .cuas_range(cuas_range),
     )?;
 

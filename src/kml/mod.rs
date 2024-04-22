@@ -24,6 +24,7 @@ const KML_DOCUMENT_ATTRIBUTES: [(&str, &str); 2] = [
 pub struct WriteAsKmlOptions {
     pub disable_track_icons: bool,
     pub cuas_range: f64,
+    pub ignore_cuas_origin: bool,
 }
 
 impl WriteAsKmlOptions {
@@ -33,6 +34,10 @@ impl WriteAsKmlOptions {
     }
     pub fn cuas_range(mut self, val: f64) -> WriteAsKmlOptions {
         self.cuas_range = val;
+        self
+    }
+    pub fn ignore_cuas_origin(mut self, val: bool) -> WriteAsKmlOptions {
+        self.ignore_cuas_origin = val;
         self
     }
 }
@@ -64,7 +69,9 @@ pub fn write_as_kml(
                     database.static_cuas_location.clone(),
                     cuas_range,
                 )?;
-                write_cuas_origin(x, database.static_cuas_location.clone())?;
+                if !options.ignore_cuas_origin {
+                    write_cuas_origin(x, database.static_cuas_location.clone())?;
+                }
 
                 Ok(())
             })?;
