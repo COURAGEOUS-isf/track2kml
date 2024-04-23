@@ -17,7 +17,10 @@ mod clap_util;
 pub fn process_to_kml(args: &ArgMatches) -> Result<PathBuf, anyhow::Error> {
     let input_path: &PathBuf = args.get_one("input_path").unwrap();
     let database = read_input_file(args, input_path)?;
-    let output_path = input_path.with_extension("kml");
+    let output_path = args
+        .get_one("output_path")
+        .cloned()
+        .unwrap_or_else(|| input_path.with_extension("kml"));
     let output_file = BufWriter::new(File::create(&output_path)?);
     let disable_track_icons = args.get_flag("no_track_icons");
     let ignore_cuas_origin = args.get_flag("ignore_cuas_origin");

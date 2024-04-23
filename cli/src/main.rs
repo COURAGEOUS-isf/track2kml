@@ -19,6 +19,10 @@ fn main() -> ExitCode {
         /// The path of the file to convert to KML.
         input_path: PathBuf,
 
+        /// Where to place the resulting KML file. (Default: input_path with the "kml" extension)
+        #[arg(short = 'o')]
+        output_path: Option<PathBuf>,
+
         /// Specify the detection origin (Radar position) in GPS coordinates `lat,lon,height`.
         ///
         /// Values must be formatted as longitude,latitude[,altitude (AMSL)]. If the altitude is omitted,
